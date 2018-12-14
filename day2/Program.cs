@@ -9,6 +9,8 @@ namespace day2
         public static Dictionary<char, int> hash;
         static void Main(string[] args)
         {
+            Part2();
+            /*
             var lines = System.IO.File.ReadAllLines("inputtest.txt");
 
             InitHash();
@@ -29,6 +31,27 @@ namespace day2
                 InitHash();
             }
             Console.WriteLine(twos * threes);
+             */
+        }
+
+        public static void Part2() {
+            var lines = System.IO.File.ReadAllLines("input.txt");
+
+            // naiive
+            foreach (var line in lines) {
+                foreach (var line2 in lines) {
+                    var diffs = 0;
+                    for (int i=0;i<line.Length;i++) {
+                        if (line[i] != line2[i])
+                            diffs++;
+                    }
+                    if (diffs == 1) {
+                        Console.WriteLine($"ID 1: {line}");
+                        Console.WriteLine($"ID 2: {line2}");
+                        Environment.Exit(0);
+                    }
+                }
+            }
         }
 
         public static void InitHash()
