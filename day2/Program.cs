@@ -48,6 +48,7 @@ namespace day2
                     if (diffs == 1) {
                         Console.WriteLine($"ID 1: {line}");
                         Console.WriteLine($"ID 2: {line2}");
+                        Console.WriteLine("You can take out the different value manually :)");
                         Environment.Exit(0);
                     }
                 }
