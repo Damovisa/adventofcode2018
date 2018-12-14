@@ -32,7 +32,7 @@ namespace day3
                 }
             }
             // ok, all squares have been marked out
-            //  find elements > 0
+            //  find elements > 1
             var counter = 0;
             for (int i=0;i<fabricSize;i++) {
                 for (int j=0;j<fabricSize;j++) {
